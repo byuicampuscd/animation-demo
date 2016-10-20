@@ -1,7 +1,7 @@
 var boxen = [];
 
 var containers = [
-    {name:"meter", items: 5, width:300, height: 300, path:"./GIF/Meter/thermometer", ext:".png", rule:function(i){return i}},
+    {name:"meter", items: 10, width:300, height: 300, path:"./GIF/Meter/thermometer", ext:".png", rule:function(i){return i}},
     {name:"stackable", items: 5, width:175, height: 325, path:"./GIF/Stackable/volcano", ext:".gif", rule:function(i){return i}},
     {name:"crossfade", items: 5, width:300, height: 300, path:"./GIF/Crossfade/mountain", ext:".png", rule:function(i){return i}}];
 
@@ -9,7 +9,9 @@ containers.map(function(container) {
     var animations = new Array(container.items);
     for (var i = 0; i < animations.length; i++) animations[i] = container.path + container.rule(i+1) + container.ext;
     animations = animations.map(function (url) {
-        return new Animation(url, container.width, container.height);
+        var animation = new Animation(url, container.width, container.height);
+        if(container.frames)animation.setFrameAmount(container.frames);
+        return animation;
     });
     var box = new Animator(animations);
     box.setScene("#"+container.name)
