@@ -1,68 +1,58 @@
-html, body{
-
+html,
+body {
     height: 100%;
-/*    background-color: deeppink;*/
 }
 
-svg{
+body {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+svg {
     width: 100%;
+    max-width: 800px;
     height: auto;
-
 }
 
-main{
-/*    background-color: brown;*/
-   height:50%;
-    width:50%;
-    padding:0;
-    margin:auto;
+main {
+    height: 50%;
+    width: 50%;
+    padding: 0;
+    margin: auto;
 }
 
-.container{
+.container {
     margin: auto;
     position: relative;
-    width:100%;
-/*    min-width: 950px;*/
+    width: 100%;
+    /*    min-width: 950px;*/
     display: flex;
     justify-content: space-around;
-
 }
 
-.container svg{
-
-}
-
-
-.container > div{
+.container > div {
     position: relative;
     display: flex;
     align-items: flex-end;
-
-    width:100%;
+    width: 100%;
     height: 375px;
     margin: auto;
 }
-.container > div:not(#stackable) svg{
-/*    margin-top: 350px;*/
-}
-#stackable{
 
-}
-
-ul{
+ul {
     display: flex;
     background-color: #c2c6c7;
     align-self: flex-end;
     justify-content: space-between;
     width: 100%;
-    padding:.5%;
+    padding: .5%;
     box-shadow: 2px 2px 2px 2px #888888;
     border-radius:
 }
 
-li{
-    padding:5%;
-    width:15%;
+li {
+    padding: 5%;
+    width: 15%;
     text-align: center;
     text-decoration: none;
     list-style: none;
@@ -70,7 +60,8 @@ li{
     font-size: 25px;
 }
 
-li:hover{
+li.active,
+li:hover {
     cursor: pointer;
     background-color: #b3b7b8;
 }
