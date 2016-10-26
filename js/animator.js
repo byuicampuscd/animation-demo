@@ -192,7 +192,7 @@ Animator.prototype.frameTransition = function () {
     // Create callback
     var that = this;
     function complete() {
-        that.frameTransition(that.transitionDuration);
+        that.frameTransition();
     }
 
     // Animate
@@ -215,7 +215,7 @@ Animator.prototype.crossfadeTransition = function () {
     // Create callback
     var that = this;
     function complete() {
-        that.crossfadeTransition(that.transitionDuration);
+        that.crossfadeTransition();
     }
     
     // Animate - only one should have the callback to keep animation from moving to fast
