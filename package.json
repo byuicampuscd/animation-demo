@@ -1,0 +1,14 @@
+{
+  "name": "animation-demo",
+  "version": "1.0.0",
+  "description": "No description",
+  "main": "",
+  "scripts": {
+    "test": "NA"
+  },
+  "author": "",
+  "contributors": [{
+    "name": "Hansen-Jay"
+  }],
+  "license": "MIT"
+}
